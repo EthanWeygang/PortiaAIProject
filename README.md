@@ -1,6 +1,7 @@
 # Portia AI Day Planner
 
 A GUI application that uses Portia AI to help plan and schedule events in your calendar.
+Youtube Video: https://www.youtube.com/watch?v=QrKxAyH70L0&ab_channel=Ethan
 
 ## Features
 
