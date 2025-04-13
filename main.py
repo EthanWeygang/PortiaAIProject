@@ -24,18 +24,14 @@ class PortiaGUI:
         self.plan_run = None
         self.portia = None
         
-        # Speech recognition variables
         self.recognizer = sr.Recognizer()
         self.is_listening = False
         self.listen_thread = None
         
-        # Initialize UI
         self.create_widgets()
         
-        # Load environment variables
         load_dotenv(override=True)
-        
-        # Initialize Portia
+
         self.init_portia()
 
     def create_widgets(self):
@@ -158,7 +154,6 @@ class PortiaGUI:
         plan_popup.transient(self.root)
         plan_popup.grab_set()
         
-        # Plan output
         plan_output = scrolledtext.ScrolledText(plan_popup, wrap=tk.WORD, height=20)
         plan_output.pack(fill="both", expand=True, padx=10, pady=10)
         
@@ -220,7 +215,6 @@ class PortiaGUI:
         
         self.plan_run = self.portia.run_plan(self.plan)
         
-        # Handle clarifications
         self.handle_clarifications()
         
         self.status_var.set("Plan executed successfully.")
@@ -258,7 +252,6 @@ class PortiaGUI:
                     
                     ttk.Button(dialog, text="Submit", command=submit_input).pack(pady=20)
                 
-                # Wait for dialog to be destroyed
                 self.root.wait_window(dialog)
             
             # Resume plan execution
