@@ -9,8 +9,7 @@ from portia import (
     default_config,
 )
 from portia.config import LLMModel
-from portia import Clarification, ClarificationHandler, ExecutionHooks, InputClarification, MultipleChoiceClarification
-from typing import Callable, Any
+from portia import MultipleChoiceClarification
 import json
 import speech_recognition as sr
 import threading
